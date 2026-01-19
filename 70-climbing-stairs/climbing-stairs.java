@@ -6,9 +6,10 @@ class Solution {
         if (n == 2) return 2;
         int ways = 0;
         for (int i = 3; i <= n; i++) {
-            ways = first + second;
+            ways = first + second;//n-1+n-2
             first = second;
-            second = ways;
+            second = ways;//Last step = 1 → I was at n-1
+                          //Last step = 2 → I was at n-2
         }
         return ways;
     }
